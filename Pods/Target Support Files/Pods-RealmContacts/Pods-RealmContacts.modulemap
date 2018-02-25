@@ -1,0 +1,6 @@
+framework module Pods_RealmContacts {
+  umbrella header "Pods-RealmContacts-umbrella.h"
+
+  export *
+  module * { export * }
+}

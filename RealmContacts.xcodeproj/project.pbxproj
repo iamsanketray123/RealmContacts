@@ -7,21 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		19639A2620417F0A0032FFA7 /* ContactDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19639A2520417F0A0032FFA7 /* ContactDetails.swift */; };
 		1994B1462040908500A63EEA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1994B1452040908500A63EEA /* AppDelegate.swift */; };
-		1994B1482040908500A63EEA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1994B1472040908500A63EEA /* ViewController.swift */; };
+		1994B1482040908500A63EEA /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1994B1472040908500A63EEA /* ContactsViewController.swift */; };
 		1994B14B2040908500A63EEA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1994B1492040908500A63EEA /* Main.storyboard */; };
 		1994B14D2040908500A63EEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1994B14C2040908500A63EEA /* Assets.xcassets */; };
 		1994B1502040908500A63EEA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1994B14E2040908500A63EEA /* LaunchScreen.storyboard */; };
+		1994B158204093E800A63EEA /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1994B157204093E800A63EEA /* Person.swift */; };
+		1994B15A2040960D00A63EEA /* ContactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1994B1592040960D00A63EEA /* ContactCell.swift */; };
+		1994B15C2040977700A63EEA /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1994B15B2040977700A63EEA /* RealmService.swift */; };
+		61E7A39AEC744A68558EFCD6 /* Pods_RealmContacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D04385CA353091BFFB82B3C9 /* Pods_RealmContacts.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		19639A2520417F0A0032FFA7 /* ContactDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetails.swift; sourceTree = "<group>"; };
 		1994B1422040908500A63EEA /* RealmContacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RealmContacts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1994B1452040908500A63EEA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1994B1472040908500A63EEA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1994B1472040908500A63EEA /* ContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
 		1994B14A2040908500A63EEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1994B14C2040908500A63EEA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1994B14F2040908500A63EEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1994B1512040908500A63EEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1994B157204093E800A63EEA /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		1994B1592040960D00A63EEA /* ContactCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCell.swift; sourceTree = "<group>"; };
+		1994B15B2040977700A63EEA /* RealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
+		3F9E88E918BA092416EFB13C /* Pods-RealmContacts.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RealmContacts.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RealmContacts/Pods-RealmContacts.debug.xcconfig"; sourceTree = "<group>"; };
+		AB86AA61187A452DBD304637 /* Pods-RealmContacts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RealmContacts.release.xcconfig"; path = "Pods/Target Support Files/Pods-RealmContacts/Pods-RealmContacts.release.xcconfig"; sourceTree = "<group>"; };
+		D04385CA353091BFFB82B3C9 /* Pods_RealmContacts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RealmContacts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61E7A39AEC744A68558EFCD6 /* Pods_RealmContacts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +53,8 @@
 			children = (
 				1994B1442040908500A63EEA /* RealmContacts */,
 				1994B1432040908500A63EEA /* Products */,
+				F49059C9DC661C8470570594 /* Pods */,
+				472668F15335502FC268268B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,13 +70,34 @@
 			isa = PBXGroup;
 			children = (
 				1994B1452040908500A63EEA /* AppDelegate.swift */,
-				1994B1472040908500A63EEA /* ViewController.swift */,
+				1994B1472040908500A63EEA /* ContactsViewController.swift */,
+				19639A2520417F0A0032FFA7 /* ContactDetails.swift */,
+				1994B157204093E800A63EEA /* Person.swift */,
+				1994B1592040960D00A63EEA /* ContactCell.swift */,
+				1994B15B2040977700A63EEA /* RealmService.swift */,
 				1994B1492040908500A63EEA /* Main.storyboard */,
 				1994B14C2040908500A63EEA /* Assets.xcassets */,
 				1994B14E2040908500A63EEA /* LaunchScreen.storyboard */,
 				1994B1512040908500A63EEA /* Info.plist */,
 			);
 			path = RealmContacts;
+			sourceTree = "<group>";
+		};
+		472668F15335502FC268268B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D04385CA353091BFFB82B3C9 /* Pods_RealmContacts.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F49059C9DC661C8470570594 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3F9E88E918BA092416EFB13C /* Pods-RealmContacts.debug.xcconfig */,
+				AB86AA61187A452DBD304637 /* Pods-RealmContacts.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +107,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1994B1542040908500A63EEA /* Build configuration list for PBXNativeTarget "RealmContacts" */;
 			buildPhases = (
+				D14A3D4FE8BCF8A311981CDF /* [CP] Check Pods Manifest.lock */,
 				1994B13E2040908500A63EEA /* Sources */,
 				1994B13F2040908500A63EEA /* Frameworks */,
 				1994B1402040908500A63EEA /* Resources */,
+				03256C4DA9E9EF53FDE6AAC7 /* [CP] Embed Pods Frameworks */,
+				7AEBB6B5B8E23BED1315DE04 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -131,13 +170,75 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		03256C4DA9E9EF53FDE6AAC7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-RealmContacts/Pods-RealmContacts-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RealmContacts/Pods-RealmContacts-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7AEBB6B5B8E23BED1315DE04 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RealmContacts/Pods-RealmContacts-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D14A3D4FE8BCF8A311981CDF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RealmContacts-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1994B13E2040908500A63EEA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1994B1482040908500A63EEA /* ViewController.swift in Sources */,
+				1994B15A2040960D00A63EEA /* ContactCell.swift in Sources */,
+				19639A2620417F0A0032FFA7 /* ContactDetails.swift in Sources */,
+				1994B158204093E800A63EEA /* Person.swift in Sources */,
+				1994B1482040908500A63EEA /* ContactsViewController.swift in Sources */,
 				1994B1462040908500A63EEA /* AppDelegate.swift in Sources */,
+				1994B15C2040977700A63EEA /* RealmService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,6 +373,7 @@
 		};
 		1994B1552040908500A63EEA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3F9E88E918BA092416EFB13C /* Pods-RealmContacts.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -287,6 +389,7 @@
 		};
 		1994B1562040908500A63EEA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AB86AA61187A452DBD304637 /* Pods-RealmContacts.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
