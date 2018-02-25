@@ -22,15 +22,16 @@ class ContactDetails: UIViewController {
         super.viewDidLoad()
 
         updateUI()
+        print(person.isFavorite,"🍏")
     }
     
     
     fileprivate func updateUI(){
-        image.layer.borderColor = UIColor.white.cgColor
+        image.layer.borderColor  = UIColor.white.cgColor
         image.layer.cornerRadius = 128 / 2
-        image.layer.borderWidth = 4
+        image.layer.borderWidth  = 4
         name.text = person.firstName + " " + person.lastName
-        name.adjustsFontSizeToFitWidth = true
+        name.adjustsFontSizeToFitWidth         = true
         name.adjustsFontForContentSizeCategory = true
         organization.adjustsFontSizeToFitWidth = true
         organization.adjustsFontForContentSizeCategory = true
@@ -40,4 +41,9 @@ class ContactDetails: UIViewController {
     
     
 
+}
+extension UINavigationController {
+    open override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
 }

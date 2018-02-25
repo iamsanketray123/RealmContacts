@@ -17,6 +17,36 @@
         </array>
     </customFonts>
     <scenes>
+        <!--Favorites TableVC-->
+        <scene sceneID="OnY-Dn-J3O">
+            <objects>
+                <tableViewController id="QHw-pC-kgt" customClass="FavoritesTableVC" customModule="RealmContacts" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="1N6-qS-Dqz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.19607843137254902" green="0.21176470588235294" blue="0.29411764705882354" alpha="1" colorSpace="calibratedRGB"/>
+                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="favoriteCell" id="m9n-0q-Qpl">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="m9n-0q-Qpl" id="bvb-Xq-DIq">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.33333333333333331" green="0.34509803921568627" blue="0.47058823529411764" alpha="1" colorSpace="calibratedRGB"/>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="QHw-pC-kgt" id="Qqg-gO-mSf"/>
+                            <outlet property="delegate" destination="QHw-pC-kgt" id="l16-FA-Tlk"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YUi-Zi-OLs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1167" y="-202"/>
+        </scene>
         <!--Contacts-->
         <scene sceneID="F14-ER-RoO">
             <objects>
@@ -129,7 +159,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Mcj-LK-Uem"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Contacts" id="CjO-M1-7uc"/>
+                    <navigationItem key="navigationItem" title="Contacts" id="CjO-M1-7uc">
+                        <barButtonItem key="rightBarButtonItem" title="Favorites" id="aPI-ZX-Rpn">
+                            <connections>
+                                <segue destination="QHw-pC-kgt" kind="show" id="XcZ-u6-DFm"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="sb" destination="QwP-Ei-JAC" id="62Q-hg-9XK"/>
                         <outlet property="tableView" destination="TEY-E7-6zw" id="mwK-DH-qdQ"/>
@@ -274,7 +310,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y3L-z5-bLP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1136.8" y="139.880059970015"/>
+            <point key="canvasLocation" x="1166" y="490"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="H0x-pK-f8q">

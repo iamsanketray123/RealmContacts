@@ -125,54 +125,7 @@ class ContactsViewController: UIViewController {
 
 }
 
-extension ContactsViewController : UITableViewDelegate, UITableViewDataSource {
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        guard let people = people else {
-            return 0
-        }
-        return people.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ContactCell
-        let person = people[indexPath.row]
-        cell.configure(with: person)
-        if let searchText = sb.text {
-            cell.highlightText(contact: person, searchText: searchText)
-        }
-        return cell
-    }
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 102
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-         selectedPerson = people[indexPath.row]
-        tableView.deselectRow(at: indexPath, animated: true)
-        performSegue(withIdentifier: "toDetailView", sender: self)
-    }
-    
-    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        let delete = UIContextualAction(style: .destructive, title: "Delete") { (action, view, nil) in
-            let person = self.people[indexPath.row]
-            self.deleteContactFromPhone(person: person)
-            let realm = RealmService.shared.realm
-            RealmService.shared.delete(person)
-            self.people = realm.objects(Person.self).sorted(byKeyPath: "firstName", ascending: true)
-            self.tableView.reloadData()
-            
-        }
-        
-        delete.backgroundColor = #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1)
-        delete.image = #imageLiteral(resourceName: "cross")
-        let configuration =  UISwipeActionsConfiguration(actions: [delete])
-        configuration.performsFirstActionWithFullSwipe = false
-        return configuration
-    }
-    
-    
-}
+
 
 extension ContactsViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {

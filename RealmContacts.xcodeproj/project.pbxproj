@@ -16,6 +16,8 @@
 		1994B158204093E800A63EEA /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1994B157204093E800A63EEA /* Person.swift */; };
 		1994B15A2040960D00A63EEA /* ContactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1994B1592040960D00A63EEA /* ContactCell.swift */; };
 		1994B15C2040977700A63EEA /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1994B15B2040977700A63EEA /* RealmService.swift */; };
+		19972E452042943F002C068B /* ContactsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19972E442042943F002C068B /* ContactsExtension.swift */; };
+		19972E4720429CAD002C068B /* FavoritesTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19972E4620429CAD002C068B /* FavoritesTableVC.swift */; };
 		61E7A39AEC744A68558EFCD6 /* Pods_RealmContacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D04385CA353091BFFB82B3C9 /* Pods_RealmContacts.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +33,8 @@
 		1994B157204093E800A63EEA /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		1994B1592040960D00A63EEA /* ContactCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCell.swift; sourceTree = "<group>"; };
 		1994B15B2040977700A63EEA /* RealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
+		19972E442042943F002C068B /* ContactsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsExtension.swift; sourceTree = "<group>"; };
+		19972E4620429CAD002C068B /* FavoritesTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesTableVC.swift; sourceTree = "<group>"; };
 		3F9E88E918BA092416EFB13C /* Pods-RealmContacts.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RealmContacts.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RealmContacts/Pods-RealmContacts.debug.xcconfig"; sourceTree = "<group>"; };
 		AB86AA61187A452DBD304637 /* Pods-RealmContacts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RealmContacts.release.xcconfig"; path = "Pods/Target Support Files/Pods-RealmContacts/Pods-RealmContacts.release.xcconfig"; sourceTree = "<group>"; };
 		D04385CA353091BFFB82B3C9 /* Pods_RealmContacts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RealmContacts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -71,6 +75,8 @@
 			children = (
 				1994B1452040908500A63EEA /* AppDelegate.swift */,
 				1994B1472040908500A63EEA /* ContactsViewController.swift */,
+				19972E4620429CAD002C068B /* FavoritesTableVC.swift */,
+				19972E442042943F002C068B /* ContactsExtension.swift */,
 				19639A2520417F0A0032FFA7 /* ContactDetails.swift */,
 				1994B157204093E800A63EEA /* Person.swift */,
 				1994B1592040960D00A63EEA /* ContactCell.swift */,
@@ -236,9 +242,11 @@
 				1994B15A2040960D00A63EEA /* ContactCell.swift in Sources */,
 				19639A2620417F0A0032FFA7 /* ContactDetails.swift in Sources */,
 				1994B158204093E800A63EEA /* Person.swift in Sources */,
+				19972E4720429CAD002C068B /* FavoritesTableVC.swift in Sources */,
 				1994B1482040908500A63EEA /* ContactsViewController.swift in Sources */,
 				1994B1462040908500A63EEA /* AppDelegate.swift in Sources */,
 				1994B15C2040977700A63EEA /* RealmService.swift in Sources */,
+				19972E452042943F002C068B /* ContactsExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

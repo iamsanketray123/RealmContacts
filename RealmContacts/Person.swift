@@ -13,8 +13,9 @@ import RealmSwift
 @objcMembers class Person: Object{
     dynamic var firstName :   String = ""
     dynamic var lastName:     String = ""
-    dynamic var phoneNumber:  String = "000_0000_000"
+    dynamic var phoneNumber:  String = ""
     dynamic var organization: String = ""
+    dynamic var isFavorite :  Bool = false
     
     convenience init(firstName: String, lastName: String, phoneNumber: String, organization: String){
         self.init()

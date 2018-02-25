@@ -25,26 +25,25 @@ class RealmService {
         }
     }
     
+    func update<T: Object>(_ person: T) {
+        do {
+            try realm.write {
+                (person as! Person).isFavorite = !(person as! Person).isFavorite
+                print("Changed favorite property")
+            }
+        }catch {
+            print(error)
+        }
+    }
+    
     func delete<T: Object>(_ person: T) {
         do {
             try realm.write{
                 realm.delete(person)
             }
         }catch{
-            post(error)
+            print(error)
         }
     }
-    func post(_ error : Error) {
-        NotificationCenter.default.post(name: Notification.Name("RealmError"), object: error)
-    }
-    func observeRealmErrors(in vc: UIViewController, completion: @escaping (Error?)-> Void) {
-        NotificationCenter.default.addObserver(forName: Notification.Name("RealmError"), object: nil, queue: nil) { (notification) in
-            completion(notification.object as? Error)
-        }
-    }
-    func stopObservingErrors(in vc: UIViewController){
-        NotificationCenter.default.removeObserver(vc, name: Notification.Name("RealmError"), object: nil)
-    }
-    
     
 }
