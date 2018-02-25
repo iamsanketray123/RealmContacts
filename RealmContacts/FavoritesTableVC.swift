@@ -13,10 +13,16 @@ class FavoritesTableVC: UITableViewController {
 
     var people : Results<Person>?
 
+    @IBOutlet var noItems: UIView!
+    @IBOutlet var table: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         fetchFavoriteContacts()
+        if people?.count ?? 0 == 0 {
+            table.backgroundView = noItems
+        }
     }
     
     func fetchFavoriteContacts(){

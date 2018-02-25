@@ -75,8 +75,8 @@
 			children = (
 				1994B1452040908500A63EEA /* AppDelegate.swift */,
 				1994B1472040908500A63EEA /* ContactsViewController.swift */,
-				19972E4620429CAD002C068B /* FavoritesTableVC.swift */,
 				19972E442042943F002C068B /* ContactsExtension.swift */,
+				19972E4620429CAD002C068B /* FavoritesTableVC.swift */,
 				19639A2520417F0A0032FFA7 /* ContactDetails.swift */,
 				1994B157204093E800A63EEA /* Person.swift */,
 				1994B1592040960D00A63EEA /* ContactCell.swift */,

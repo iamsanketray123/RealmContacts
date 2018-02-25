@@ -49,12 +49,14 @@ extension ContactsViewController : UITableViewDelegate, UITableViewDataSource {
         let favorite = UIContextualAction(style: .normal, title: "Favorite") { (contextAction: UIContextualAction, sourceView: UIView, completion: (Bool)-> Void) in
             self.tableView.reloadRows(at: [indexPath], with: .none)
             RealmService.shared.update(person)
+            self.showToast(message: "Added to Favorites")
             completion(true)
         }
         
         let unfavorite = UIContextualAction(style: .normal, title: "Unfavorite") { (contextAction: UIContextualAction, sourceView: UIView, completion: (Bool)->Void) in
             self.tableView.reloadRows(at: [indexPath], with: .none)
             RealmService.shared.update(person)
+            self.showToast(message: "Removed from Favorites")
             completion(true)
         }
         
@@ -76,8 +78,6 @@ extension ContactsViewController : UITableViewDelegate, UITableViewDataSource {
             configuration.performsFirstActionWithFullSwipe = false
             return configuration
         }
-        
     }
-    
     
 }

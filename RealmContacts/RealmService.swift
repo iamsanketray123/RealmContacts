@@ -17,7 +17,6 @@ class RealmService {
     var realm = try! Realm()
     
     func save<T: Object>(_ person: T) {
-
         DispatchQueue.main.async {
             try! self.realm.write{
                 self.realm.add(person)
@@ -29,7 +28,6 @@ class RealmService {
         do {
             try realm.write {
                 (person as! Person).isFavorite = !(person as! Person).isFavorite
-                print("Changed favorite property")
             }
         }catch {
             print(error)

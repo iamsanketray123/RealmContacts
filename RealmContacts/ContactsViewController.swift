@@ -38,7 +38,6 @@ class ContactsViewController: UIViewController {
             print(people.count)
             people = realm.objects(Person.self).sorted(byKeyPath: "firstName", ascending: true)
             tableView.reloadData()
-            print("We already have contacts to display")
         }
     }
     
@@ -57,7 +56,6 @@ class ContactsViewController: UIViewController {
                 return
             }
             if granted {
-                print("Access granted")
                 DispatchQueue.main.async{
                     SVProgressHUD.show(withStatus: "Loading...")
                     SVProgressHUD.setDefaultMaskType(.gradient)
@@ -125,8 +123,6 @@ class ContactsViewController: UIViewController {
 
 }
 
-
-
 extension ContactsViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if searchText.count > 0 {
@@ -153,6 +149,26 @@ extension ContactsViewController: UISearchBarDelegate {
     }
 }
 
+extension ContactsViewController {
+//    Helper method
+    func showToast(message : String) {
+        let toastLabel = UILabel(frame: CGRect(x: 25, y: self.view.center.y+50, width: (view.frame.width - 50), height: 40))
+        toastLabel.backgroundColor = UIColor.black.withAlphaComponent(0.6)
+        toastLabel.textColor = UIColor.white
+        toastLabel.textAlignment = .center;
+        toastLabel.font = UIFont(name: "Montserrat-Light", size: 12.0)
+        toastLabel.text = message
+        toastLabel.alpha = 1.0
+        toastLabel.layer.cornerRadius = 20;
+        toastLabel.clipsToBounds  =  true
+        self.tableView.addSubview(toastLabel)
+        UIView.animate(withDuration: 1, delay: 1, options: .curveEaseOut, animations: {
+            toastLabel.alpha = 0.0
+        }, completion: {(isCompleted) in
+            toastLabel.removeFromSuperview()
+        })
+    }
+}
 
 
 

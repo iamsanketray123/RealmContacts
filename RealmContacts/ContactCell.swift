@@ -22,6 +22,7 @@ class ContactCell: UITableViewCell {
     }
     
     func highlightText(contact: Person, searchText: String){
+        
         let initialOrganizationText = contact.organization
         let organizationAttributedText = NSMutableAttributedString(string: initialOrganizationText)
         let rangeOrganization = (initialOrganizationText as NSString).range(of: searchText, options: .caseInsensitive)

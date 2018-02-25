@@ -22,7 +22,6 @@ class ContactDetails: UIViewController {
         super.viewDidLoad()
 
         updateUI()
-        print(person.isFavorite,"🍏")
     }
     
     
