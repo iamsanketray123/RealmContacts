@@ -17,6 +17,7 @@ class ContactDetails: UIViewController {
     @IBOutlet weak var phone: UILabel!
     @IBOutlet weak var organization: UILabel!
     
+    var indexPath : IndexPath!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,9 +27,10 @@ class ContactDetails: UIViewController {
     
     
     fileprivate func updateUI(){
-        image.layer.borderColor  = UIColor.white.cgColor
+        
+        setupImage()
+        
         image.layer.cornerRadius = 128 / 2
-        image.layer.borderWidth  = 4
         name.text = person.firstName + " " + person.lastName
         name.adjustsFontSizeToFitWidth         = true
         name.adjustsFontForContentSizeCategory = true
@@ -38,6 +40,14 @@ class ContactDetails: UIViewController {
         organization.text = person.organization == "" ? "None" : person.organization
     }
     
+    fileprivate func setupImage(){
+        
+        let selectedRow = indexPath.row
+        let totalNumberOfImages = 15
+        let imageNumber = selectedRow % totalNumberOfImages
+        image.image = UIImage(named: "\(imageNumber)")
+        
+    }
     
 
 }

@@ -32,6 +32,8 @@ extension ContactsViewController : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selectedPerson = people[indexPath.row]
+        selectedIndexPath = indexPath
+        print(indexPath.row,"🍓")
         tableView.deselectRow(at: indexPath, animated: true)
         performSegue(withIdentifier: "toDetailView", sender: self)
     }

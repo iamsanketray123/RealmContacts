@@ -18,8 +18,9 @@ class ContactsViewController: UIViewController {
     
     var people : Results<Person>!
     
-    var notificationToken: NotificationToken?
-    var selectedPerson : Person?
+    var notificationToken : NotificationToken?
+    var selectedPerson    : Person?
+    var selectedIndexPath : IndexPath?
     
     
     override func viewDidLoad() {
@@ -39,11 +40,14 @@ class ContactsViewController: UIViewController {
             people = realm.objects(Person.self).sorted(byKeyPath: "firstName", ascending: true)
             tableView.reloadData()
         }
+        
+        tableView.contentInset = UIEdgeInsetsMake(12, 0, 0, 0)
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        notificationToken?.invalidate()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        tableView.contentInset = UIEdgeInsetsMake(12, 0, 0, 0)
     }
     
     
@@ -90,6 +94,7 @@ class ContactsViewController: UIViewController {
         if segue.identifier == "toDetailView" {
             let destination = segue.destination as! ContactDetails
             destination.person = selectedPerson
+            destination.indexPath = selectedIndexPath
         }
     }
     func deleteContactFromPhone(person: Person){
